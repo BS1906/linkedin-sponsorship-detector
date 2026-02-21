@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Sponsorship Detector",
+    "version": "1.0",
+    "description": "Detects sponsorship availability in LinkedIn job descriptions.",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/jobs/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ]
+  }
