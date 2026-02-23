@@ -88,8 +88,10 @@ It does not access LinkedIn APIs or modify backend systems.
 
 ---
 
-## 🙌 Contributions
+## 🤝 Open for Contributors
 
-This is a personal project built to solve a real-world problem.  
-Feedback and suggestions are welcome!
+This project started as a personal solution to a real-world problem, but I’d love to improve it further with the community.
 
+Feel free to open an issue or submit a pull request.
+
+Let’s make job searching smarter 🚀
