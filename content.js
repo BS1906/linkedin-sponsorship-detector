@@ -901,6 +901,34 @@ function classify(text) {
 
     const lower = text.toLowerCase();
 
+    const clearancePatterns = [
+        "top secret",
+        "top secret/sci",
+        "ts/sci",
+        "secret clearance",
+        "security clearance required",
+        "security clearance is required",
+        "active clearance",
+        "must have clearance",
+        "dod clearance",
+        "dod secret",
+        "active secret",
+        "active top secret",
+        "clearance required",
+        "must hold a clearance",
+        "polygraph",
+        "sci clearance",
+        "interim clearance",
+        "public trust clearance",
+        "confidential clearance"
+    ];
+
+    for (let p of clearancePatterns) {
+        if (lower.includes(p)) {
+            return { label: "CLEARANCE REQUIRED 🔒 (No Sponsorship)", color: "#8e44ad" };
+        }
+    }
+
     const noPatterns = [
         "no sponsorship",
         "no visa sponsorship",
@@ -911,7 +939,14 @@ function classify(text) {
         "we cannot sponsor",
         "cannot provide visa sponsorship",
         "no h1b",
-        "not sponsor work visa"
+        "not sponsor work visa",
+        "must be a u.s. citizen",
+        "must be a us citizen",
+        "u.s. citizenship required",
+        "us citizenship required",
+        "citizens only",
+        "authorized to work in the us without",
+        "authorized to work in the united states without"
     ];
 
     for (let p of noPatterns) {
